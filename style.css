@@ -1,0 +1,54 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-size: 2rem;
+	font-family: 'Brown', sans-serif;
+}
+@media screen and (min-width: 30rem) {
+	body {
+		font-size: 3rem;
+	}
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+main {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main > * {
+	position: relative;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: url('images/sincere-graphic.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+header, footer {
+	padding: 2rem;
+}
