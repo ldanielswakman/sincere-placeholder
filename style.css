@@ -1,10 +1,13 @@
-// Web fonts
+/* Web fonts */
 @font-face {
-    font-family: 'Brown';
-    src: url('fonts/lineto-brown-regular.woff2') format('woff2'),
-        url('fonts/lineto-brown-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Brown';
+  src: url('fonts/Brown-Regular.eot');
+  src: local('fonts/Brown-Regular'),
+      url('fonts/Brown-Regular.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Brown-Regular.woff') format('woff'),
+      url('fonts/Brown-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -20,7 +23,7 @@ body, html {
 
 body {
 	font-size: 2rem;
-	font-family: 'Brown', sans-serif;
+	font-family: 'Brown', Arial, sans-serif;
 	color: #000;
 }
 @media screen and (min-width: 30rem) {
@@ -29,7 +32,7 @@ body {
 	}
 }
 
-h1 { font-size: inherit; font-weight: normal; }
+h1 { margin: 0; font-size: inherit; font-weight: normal; }
 
 a, a:visited {
 	text-decoration: none;
