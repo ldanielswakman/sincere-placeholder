@@ -11,6 +11,7 @@ body, html {
 body {
 	font-size: 2rem;
 	font-family: 'Brown', sans-serif;
+	color: #000;
 }
 @media screen and (min-width: 30rem) {
 	body {
@@ -21,6 +22,10 @@ body {
 a, a:visited {
 	text-decoration: none;
 	color: inherit;
+}
+a:hover, a:focus {
+	outline: none;
+	color: #6547FE;
 }
 
 main {
@@ -43,10 +48,61 @@ main > * {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: url('images/sincere-graphic.svg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+}
+svg {
+	width: 100%;
+	height: 100%;
+	object-position: contain;
+	object-position: center;
+}
+svg .monogram {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	transition-delay: 2.3s;
+}
+.is-loaded svg .monogram {
+	opacity: 1;
+}
+svg .curve {
+	stroke-width: 0;
+	stroke-dasharray: 500;
+	stroke-dashoffset: 500;
+	opacity: 1;
+
+	transition: stroke-width 2s ease-in-out, stroke-dashoffset 2s ease-in-out, opacity 5s ease-in-out;
+}
+svg .curve--1 {
+	stroke-dashoffset: 500;
+	transition-delay: 0;
+}
+svg .curve--2 {
+	stroke-dashoffset: -500;
+	transition-delay: 0.5s;
+}
+svg .curve--3 {
+	stroke-dashoffset: -500;
+	transition-delay: 1.3s;
+}
+svg .curve--4 {
+	stroke-dashoffset: 500;
+	transition-delay: 1.3s;
+}
+svg .curve--5 {
+	stroke-dashoffset: 500;
+	transition-delay: 0.5s;
+}
+svg .curve--6 {
+	stroke-dashoffset: 500;
+	transition-delay: 0;
+}
+
+.is-loaded svg .curve {
+	stroke-width: 19;
+	stroke-dashoffset: 0;
+	opacity: 0;
 }
 
 header, footer {
