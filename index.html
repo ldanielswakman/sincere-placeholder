@@ -32,6 +32,16 @@
     <meta name="twitter:description" content="<?= $descr ?>">
     <meta name="twitter:image" content="<?= $image_url ?>"> -->
 
+    <!-- Globa site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162851749-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-162851749-1');
+    </script>
+
     <script>
       $(document).ready(function() {
         $('body').addClass('is-loaded');
